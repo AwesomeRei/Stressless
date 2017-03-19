@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_dhamar_margin"
+    android:layout_marginLeft="@dimen/activity_dhamar_margin"
+    android:layout_marginRight="@dimen/activity_dhamar_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.dhamarre.stressless.Activity.SignUp2Activity">
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/all_singup_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp"
+            android:text="Gender"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <RadioGroup
+            android:id="@+id/rbGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerPadding="@dimen/activity_dhamar_margin"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:button="@mipmap/ic_male"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:button="@mipmap/ic_female" />
+            </LinearLayout>
+
+        </RadioGroup>
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/birthday"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/female"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:paddingLeft="75dp"-->
+        <!--app:srcCompat="@mipmap/ic_male" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/male"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:paddingRight="75dp"-->
+        <!--app:srcCompat="@mipmap/ic_male" />-->
+        <!--</RelativeLayout>-->
+
+        <TextView
+            android:id="@+id/bmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="50dp"
+            android:text="Body Mass Index (BMI)"
+            android:textAlignment="center"
+            android:textColor="@color/purple"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/height_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="Height"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="3"
+                android:background="@drawable/shape"
+                android:hint="@string/prompt_height"
+                android:imeActionLabel="@string/action_height_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weight_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="Weight"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="3"
+                android:background="@drawable/shape"
+                android:hint="@string/prompt_weight"
+                android:imeActionLabel="@string/action_weight_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/default_setting"
+            android:textColor="@color/purple"
+            android:textStyle="italic"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="294dp" />
+
+        <Button
+            android:id="@+id/btnGo"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/purple"
+            android:text="Let's Go"
+            android:textColor="@android:color/background_light" />
+
+    </LinearLayout>
+    <!--<RadioGroup-->
+    <!--android:id="@+id/rbGender"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rbMale"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="RadioButton" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/rbFemale"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="RadioButton" />-->
+    <!--</RadioGroup>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--tools:layout_editor_absoluteX="8dp"-->
+    <!--tools:layout_editor_absoluteY="8dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="Height (in cm)" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/spinnerHeight"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="3"-->
+    <!--android:entries="@array/bmi_height_indexes"-->
+    <!--android:prompt="@string/bmi_height_index" />-->
+
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/textView3"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:text="Weight (in kg)" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/spinnerWeight"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="3"-->
+    <!--android:entries="@array/bmi_weight_indexes"-->
+    <!--android:prompt="@string/bmi_weight_index"-->
+
+    <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/cbDefault"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="CheckBox"-->
+    <!--tools:layout_editor_absoluteX="25dp"-->
+    <!--tools:layout_editor_absoluteY="294dp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btnGO"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Button" />-->
+
+</LinearLayout>

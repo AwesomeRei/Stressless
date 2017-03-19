@@ -1,0 +1,17 @@
+Notes:
+1. Kalo buat nama untuk item pake id yang jelas misal button maka idnya pake awalan btnXxx.  (Xxx itu nama pake besar depannya). textview --> tvXxx. Edittext --> etXxx. 
+
+2. misalnya ada sesuatu yang dipilih misal gender, kalo itu sebuah pilihan pake radio button, references http://stackoverflow.com/questions/3576507/is-it-possible-to-change-the-radio-button-icon-in-an-android-radio-button-group
+kasih state- state gambarnya misal pas dipilih pake gambar apa kalo ga dipilih gambar yang mana (opacity doesnt work, I dont know why)
+
+3. usahakan jangan terlalu dalem nested layoutnya. terlalu berat takutnya. 
+ex : LL
+	LL
+	  LL
+             LL 
+terlalu dalam linear layoutnya yang terakhir. tapi kalo tiada pilihan lain its okay.
+
+4. gambar jangan terlalu gede size nya ex: bg_set_plan, sempat crash waktu buka activity yang ada gambar gedenya memory allocation ga kuat om
+
+
+   

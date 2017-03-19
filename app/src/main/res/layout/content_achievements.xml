@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.dhamarre.stressless.Activity.Achievements"
+    tools:showIn="@layout/activity_achievements"
+    android:layout_marginBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/achievement_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="Your Last Achievement"
+            android:textColor="@color/lightpurple" />
+
+        <ImageView
+            android:id="@+id/achievement_badge_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_badge"
+            android:layout_margin="10dp"
+            android:layout_weight="2.48" />
+
+        <TextView
+            android:id="@+id/achievement_badge_last_name"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Greatest Practice"
+            android:textColor="@color/pink"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/achievement_badge_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="1sp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            android:textAlignment="center"
+            android:textColor="@color/purple" />
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/lightpurple" />
+
+        <TextView
+            android:id="@+id/achievement_badge_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:text="Previous Achievements"
+            android:textColor="@color/purple"
+            android:textAlignment="textStart"
+            android:textStyle="bold"/>
+
+        <include layout="@layout/list_item" />
+
+        <include layout="@layout/list_item" />
+
+        <include layout="@layout/list_item" />
+
+        <include layout="@layout/list_item" />
+
+        <include layout="@layout/list_item" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

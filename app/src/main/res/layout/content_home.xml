@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dhamarre.stressless.Home"
+    tools:showIn="@layout/app_bar_home">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/main_home"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <include layout="@layout/home_top" />
+
+            <include layout="@layout/under_main" />
+
+            <include layout="@layout/upcoming" />
+
+            <include layout="@layout/stressless_set" />
+
+            <include layout="@layout/achievement" />
+
+            <include layout="@layout/statistic" />
+
+            <include layout="@layout/all_activity" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Button" /-->
+</RelativeLayout>
