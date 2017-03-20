@@ -80,6 +80,7 @@ public class SignUp2Activity extends AppCompatActivity {
                 user.setWeight(65);
                 user.setHeight(170);
             }else{
+
                 user.setHeight(Float.valueOf(height.getText().toString()));
                 user.setWeight(Float.valueOf(weight.getText().toString()));
             }

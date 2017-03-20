@@ -10,13 +10,17 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.dhamarre.stressless.Activity.Achievements;
+import com.example.dhamarre.stressless.Activity.ActivityListAll;
 import com.example.dhamarre.stressless.Activity.Playing;
 import com.example.dhamarre.stressless.Activity.SignUpActivity;
 import com.example.dhamarre.stressless.Activity.Statistic;
+import com.example.dhamarre.stressless.Activity.Stressless;
+import com.example.dhamarre.stressless.Activity.StresslessResult;
 import com.example.dhamarre.stressless.Model.User;
 
 import java.util.Calendar;
@@ -30,8 +34,9 @@ public class Home extends AppCompatActivity
 
     private TextView firstName,fullName,gender;
     private TextView lastName;
-    private TextView years,weight,height,bmi;
-    private LinearLayout achievement,statistic,allActivity;
+    private TextView years,weight,height,bmi,statisticNumber;
+    private LinearLayout occupation,achievement,statistic,allActivity;
+    private Button go;
 
     Realm realm;
 //    AlarmActivity alarm = new AlarmActivity();
@@ -55,12 +60,18 @@ public class Home extends AppCompatActivity
         weight = (TextView)findViewById(R.id.tvWeight);
         height = (TextView)findViewById(R.id.tvHeight);
         bmi = (TextView)findViewById(R.id.tvBmi_set);
+        statisticNumber = (TextView)findViewById(R.id.tvStatisticNumberHome);
+
+        go = (Button)findViewById(R.id.btnLetsGoHealthy);
         achievement = (LinearLayout)findViewById(R.id.btnAchievement);
         statistic = (LinearLayout)findViewById(R.id.btnStatistic);
         allActivity = (LinearLayout)findViewById(R.id.btnAllActivity);
+        occupation = (LinearLayout)findViewById(R.id.btnOccupation);
         achievement.setOnClickListener(operation);
+        go.setOnClickListener(operation);
         statistic.setOnClickListener(operation);
         allActivity.setOnClickListener(operation);
+        occupation.setOnClickListener(operation);
 
         realm = Realm.getDefaultInstance();
         RealmQuery<User> query = realm.where(User.class);
@@ -92,9 +103,12 @@ public class Home extends AppCompatActivity
             lastName.setText(user.getLastName());
             fullName.setText(user.getFirstName()+" "+user.getLastName());
             gender.setText(user.getGender());
-            years.setText(String.valueOf(age))  ;
-            weight.setText( String.valueOf(user.getWeight()));
-            height.setText(String.valueOf(user.getHeight()));
+            years.setText(String.valueOf(age));
+            int w = (int )user.getWeight();
+            int y = (int) user.getHeight();
+
+            weight.setText( String.valueOf(w));
+            height.setText(String.valueOf(y));
             float x = user.getWeight()/((user.getHeight()/100)*(user.getHeight()/100));
             if (x >= 25){
                 bmi.setText("Overweight");
@@ -114,6 +128,7 @@ public class Home extends AppCompatActivity
             finish();
         }
 
+        statisticNumber.setText("0");
 
 //        Home.setLayoutManager(new LinearLayoutManager(this));
 
@@ -137,7 +152,12 @@ public class Home extends AppCompatActivity
                     break;
                 case R.id.btnStatistic: goToActivity(Statistic.class);
                     break;
-                case R.id.btnAllActivity : break;
+                case R.id.btnAllActivity : goToActivity(ActivityListAll.class);
+                    break;
+                case R.id.btnOccupation : goToActivity(StresslessResult.class);
+                    break;
+                case R.id.btnLetsGoHealthy : goToActivity(Stressless.class);
+                    break;
             }
         }
     };
@@ -166,14 +186,13 @@ public class Home extends AppCompatActivity
 //            return true;
             // Handle the camera action
         } else if (id == R.id.nav_achievement) {
-            goToActivity(Achievements.class);
-
+//            goToActivity(Achievements.class);
         } else if (id == R.id.nav_statistic) {
-            goToActivity(Statistic.class);
+//            goToActivity(Statistic.class);
         } else if (id == R.id.nav_playing) {
             goToActivity(Playing.class);
         } else if (id == R.id.nav_share) {
-
+//            goToActivity(Stressless.class);
         } else if (id == R.id.nav_logOut) {
 
             RealmQuery<User> query = realm.where(User.class);

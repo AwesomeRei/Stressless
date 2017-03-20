@@ -78,15 +78,17 @@
                 android:textColor="@color/purple" />
 
             <Button
-                android:id="@+id/upcoming_details"
+                android:id="@+id/btnLetsGoHealthy"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="158dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="30dp"
                 android:layout_toRightOf="@+id/stressless_setnow"
                 android:background="@color/pink"
                 android:clickable="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
                 android:text="let's go healthy"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
@@ -101,6 +103,7 @@
             android:background="@color/lightpurple" />
 
         <LinearLayout
+            android:id="@+id/btnOccupation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"

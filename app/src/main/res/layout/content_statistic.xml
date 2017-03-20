@@ -9,11 +9,11 @@
     tools:showIn="@layout/activity_statistic">
 
     <LinearLayout
-        android:layout_width="368dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
         <TextView
             android:id="@+id/stressless_mental"
@@ -37,7 +37,7 @@
             android:layout_marginBottom="5dp">
 
             <TextView
-                android:id="@+id/statistic_number"
+                android:id="@+id/tvStatisticNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_statistic"
@@ -50,7 +50,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/statistic_text"
+                android:id="@+id/tvStatisticText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
@@ -71,7 +71,7 @@
             android:layout_marginLeft="25dp">
 
             <TextView
-                android:id="@+id/statistic_number"
+                android:id="@+id/tvStatisticNumberOccupational"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_statistic"
@@ -190,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
 
                 <ImageView
                     android:id="@+id/statistic_fisically"
@@ -198,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
             </LinearLayout>
 
             <LinearLayout
@@ -231,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
 
                 <ImageView
                     android:id="@+id/statistic_fisically"
@@ -239,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
             </LinearLayout>
 
             <LinearLayout
@@ -272,7 +272,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
 
                 <ImageView
                     android:id="@+id/statistic_fisically"
@@ -280,7 +280,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
             </LinearLayout>
 
             <LinearLayout
@@ -313,7 +313,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
 
                 <ImageView
                     android:id="@+id/statistic_fisically"
@@ -321,7 +321,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_av" />
             </LinearLayout>
 
             <LinearLayout
@@ -354,7 +354,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_bad" />
 
                 <ImageView
                     android:id="@+id/statistic_fisically"
@@ -362,7 +362,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="20dp"
-                    android:src="@mipmap/emo_st" />
+                    android:src="@mipmap/ic_emo_st_good" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -398,7 +398,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:button="@mipmap/emo_av" />
+                        android:button="@mipmap/ic_emo_bad_on" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -420,7 +420,7 @@
                         android:layout_marginBottom="5dp"
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="50dp"
-                        android:button="@mipmap/emo_av" />
+                        android:button="@mipmap/ic_emo_av_on" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -440,7 +440,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:button="@mipmap/emo_av" />
+                        android:button="@mipmap/ic_emo_good_on" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -475,16 +475,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/mentality_badUsed"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="15dp"
+                android:id="@+id/tvMentalityBadUsed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/pink"
-                android:padding="5dp"
                 android:clickable="true"
                 android:gravity="center_vertical"
+                android:padding="5dp"
                 android:text="00"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -494,7 +495,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="15dp"
-                android:button="@mipmap/emo_st" />
+                android:button="@mipmap/ic_emo_st_bad" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -509,16 +510,17 @@
             android:orientation="horizontal"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
+
             <TextView
-                android:id="@+id/mentality_averageUsed"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="15dp"
+                android:id="@+id/tvMentalityAverageUsed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/pink"
-                android:padding="5dp"
                 android:clickable="true"
                 android:gravity="center_vertical"
+                android:padding="5dp"
                 android:text="00"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -528,7 +530,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="15dp"
-                android:button="@mipmap/emo_st" />
+                android:button="@mipmap/ic_emo_st_av" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -541,16 +543,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/mentality_goodUsed"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="15dp"
+                android:id="@+id/tvMentalityGoodUsed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/pink"
-                android:padding="5dp"
                 android:clickable="true"
                 android:gravity="center_vertical"
+                android:padding="5dp"
                 android:text="05"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -560,7 +563,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="15dp"
-                android:button="@mipmap/emo_st" />
+                android:button="@mipmap/ic_emo_st_good" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -593,16 +596,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/fisically_badUsed"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="15dp"
+                android:id="@+id/tvFisicallyBadUsed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/pink"
-                android:padding="5dp"
                 android:clickable="true"
                 android:gravity="center_vertical"
+                android:padding="5dp"
                 android:text="09"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -612,7 +616,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="15dp"
-                android:button="@mipmap/emo_st" />
+                android:button="@mipmap/ic_emo_st_bad" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -627,16 +631,17 @@
             android:orientation="horizontal"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
+
             <TextView
-                android:id="@+id/fisically_averageUsed"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="15dp"
+                android:id="@+id/tvFisicallyAverageUsed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/pink"
-                android:padding="5dp"
                 android:clickable="true"
                 android:gravity="center_vertical"
+                android:padding="5dp"
                 android:text="11"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -646,7 +651,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="15dp"
-                android:button="@mipmap/emo_st" />
+                android:button="@mipmap/ic_emo_st_av" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -659,16 +664,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/fisically_goodUsed"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="15dp"
+                android:id="@+id/tvFisicallyGoodUsed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/pink"
-                android:padding="5dp"
                 android:clickable="true"
                 android:gravity="center_vertical"
+                android:padding="5dp"
                 android:text="42"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -678,7 +684,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginRight="15dp"
-                android:button="@mipmap/emo_st" />
+                android:button="@mipmap/ic_emo_st_good" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

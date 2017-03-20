@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    tools:context="com.example.dhamarre.stressless.Activity.StresslessResult"
+    tools:showIn="@layout/activity_stressless_result"
+    android:layout_marginBottom="15dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/yourStressless_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="Your Stressless Plan Result"
+            android:textColor="@color/lightpurple" />
+
+        <ImageView
+            android:id="@+id/stressless_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_splashscreen"
+            android:layout_margin="10dp"
+            android:layout_weight="2.48" />
+
+        <TextView
+            android:id="@+id/stressless_result_name"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stressless Activity Name"
+            android:textColor="@color/pink"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/stressless_result_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="1sp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            android:textAlignment="center"
+            android:textColor="@color/purple" />
+
+        <View
+            android:id="@+id/top_line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/lightpurple" />
+
+        <TextView
+            android:id="@+id/stressless_result_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Stressless Plan Activities"
+            android:textColor="@color/pink"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+        <include layout="@layout/list_activity_a" />
+        <include layout="@layout/list_activity_a" />
+        <include layout="@layout/list_activity_a" />
+
+        <Button
+            android:id="@+id/btnSetNow"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/pink"
+            android:text="Set Stressless Plan"
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/activity_vertical_margin"
     android:layout_marginLeft="@dimen/activity_dhamar_margin"
     android:layout_marginRight="@dimen/activity_dhamar_margin"
-    android:layout_marginTop="@dimen/activity_vertical_margin"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
     android:theme="@style/AppTheme.NoActionBar"
@@ -23,20 +21,30 @@
 
     <ImageView
         android:id="@+id/logo1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="36dp"
-        android:layout_toStartOf="@+id/all_singup_form"
         android:paddingBottom="25dp"
-        android:paddingTop="25dp"
-        app:srcCompat="@mipmap/ic_logo_mulia_data_2" />
+        android:paddingTop="15dp"
+        android:src="@drawable/ic_splashscreen" />
 
         <LinearLayout
             android:id="@+id/all_singup_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/playing_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Identity"
+                android:textColor="@color/lightpurple"
+                android:textStyle="bold"/>
 
             <EditText
                 android:id="@+id/etFirstName"
@@ -117,6 +125,16 @@
 
             <!--</RelativeLayout>-->
 
+            <TextView
+                android:id="@+id/playing_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:text="Date of Birthday"
+                android:textColor="@color/lightpurple"
+                android:textStyle="bold"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -147,10 +165,11 @@
                 android:id="@+id/btnNext"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="36dp"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/purple"
+                android:background="@color/purple"
                 android:text="@string/action_sign_in"
+                android:textStyle="bold"
                 android:textColor="@android:color/background_light" />
         </LinearLayout>
 

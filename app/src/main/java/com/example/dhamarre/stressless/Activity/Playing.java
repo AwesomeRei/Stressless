@@ -1,5 +1,6 @@
 package com.example.dhamarre.stressless.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
@@ -11,13 +12,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import com.example.dhamarre.stressless.Home;
 import com.example.dhamarre.stressless.R;
 
 public class Playing extends AppCompatActivity {
 
     ProgressBar progressBar;
     CountDownTimer timer;
-    Button start;
+    Button start,skip;
     int i=0;
 
     @Override
@@ -26,9 +28,13 @@ public class Playing extends AppCompatActivity {
         setContentView(R.layout.activity_playing);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
+//        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         progressBar = (ProgressBar)findViewById(R.id.playing_progressBar);
         progressBar.setProgress(i);
         start = (Button)findViewById(R.id.btnPlayingStart);
+        skip = (Button)findViewById(R.id.btnSkip);
 
         timer = new CountDownTimer(30000,1000) {
             @Override
@@ -48,6 +54,7 @@ public class Playing extends AppCompatActivity {
         };
 
         start.setOnClickListener(operation);
+        skip.setOnClickListener(operation);
 
     }
     View.OnClickListener operation = new View.OnClickListener() {
@@ -57,6 +64,10 @@ public class Playing extends AppCompatActivity {
                 case R.id.btnPlayingStart:
                     i=0;
                     timer.start();
+                    break;
+                case R.id.btnSkip:
+                    Intent intent = new Intent(getApplicationContext(), Home.class);
+                    startActivity(intent);
                     break;
             }
         }

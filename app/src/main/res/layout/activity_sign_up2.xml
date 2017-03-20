@@ -9,6 +9,7 @@
     android:layout_marginRight="@dimen/activity_dhamar_margin"
     android:layout_marginTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="com.example.dhamarre.stressless.Activity.SignUp2Activity">
 
     <ProgressBar
@@ -25,20 +26,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:textAlignment="center">
 
         <TextView
             android:id="@+id/gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingBottom="15dp"
             android:text="Gender"
-            android:textAlignment="center"
-            android:textColor="@color/purple"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:typeface="sans" />
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/lightpurple"
+            android:textStyle="bold" />
 
         <RadioGroup
             android:id="@+id/rbGender"
@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
 
                     android:layout_marginRight="@dimen/activity_horizontal_margin"
-                    android:button="@mipmap/ic_male"
+                    android:button="@mipmap/ic_male_off"
                     android:checked="true" />
 
                 <RadioButton
@@ -68,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                    android:button="@mipmap/ic_female" />
+                    android:button="@mipmap/ic_female_off" />
             </LinearLayout>
 
         </RadioGroup>
@@ -101,12 +101,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingBottom="15dp"
             android:paddingTop="50dp"
             android:text="Body Mass Index (BMI)"
-            android:textAlignment="center"
-            android:textColor="@color/purple"
-            android:textSize="24sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/lightpurple"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -196,14 +195,26 @@
             tools:layout_editor_absoluteX="25dp"
             tools:layout_editor_absoluteY="294dp" />
 
+        <TextView
+            android:id="@+id/playing_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="7dp"
+            android:lineSpacingExtra="1sp"
+            android:text="If you use default setting to set your height and weight, your Body Mass Index will set Normal"
+            android:textColor="@color/lightpurple"
+            android:textSize="11sp" />
+
         <Button
             android:id="@+id/btnGo"
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="36dp"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/purple"
+            android:background="@color/purple"
             android:text="Let's Go"
+            android:textStyle="bold"
             android:textColor="@android:color/background_light" />
 
     </LinearLayout>

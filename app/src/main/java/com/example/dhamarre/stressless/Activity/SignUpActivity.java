@@ -116,7 +116,7 @@ public class SignUpActivity extends AppCompatActivity {
     public void setYearSpinner(){
         year = (Spinner)findViewById(R.id.spinnerYear);
         List<String> list = new ArrayList<String>();
-        for (int i = 1989;i<2018;i++){
+        for (int i = 1980;i<2018;i++){
             list.add(String.valueOf(i));
         }
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,

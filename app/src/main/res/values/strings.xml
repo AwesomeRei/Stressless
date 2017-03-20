@@ -46,7 +46,7 @@
     <string name="action_sign_in">NEXT</string>
 
     <string name="title_activity_signupmain">Sign Up Main</string>
-    <string name="default_setting">use default setting for height and weight</string>
+    <string name="default_setting">Use default setting for height and weight</string>
 
     <!--Default-->
     <string name="title_activity_achievement">Achievement</string>
